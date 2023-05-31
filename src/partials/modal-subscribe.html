@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="button">Otwórz modal</button>
+
+    <div class="modal">
+      <div class="modal__container">
+        
+          <button class="modal__close">
+            <span>x</span>
+          </button>
+          <div class="modal__image">
+            <picture>
+              <source
+                media="(max-width:767px)"
+                srcset="./images/modal-sub.jpg 1x, ./images/modal-sub@2x.jpg 2x"
+                type="image/jpeg" />
+              <img src="path-to-image.jpg" alt="Modal Image" />
+            </picture>
+          </div>
+          <div class="modal__content">
+            <h3 class="modal__title">Follow to our newsletter</h3>
+            <p class="modal__text">
+              Be the first to get exclusive offers and the latest news on our
+              product directly in your box.
+            </p>
+            <label class="modal__label" for="email">Email
+              <input
+                type="email"
+                class="modal__input"
+                placeholder="Your email"
+                id="email" 
+                />
+            </label>
+            <button class="modal__button">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script 
+      src="script.js">
+    </script>
+  </body>
+</html>
