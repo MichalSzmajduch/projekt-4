@@ -27,4 +27,73 @@
   background-image: url("../images/demo.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+}
+.label__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  max-width: 416px;
+  width: 100%;
+}
+.label__container:hover > .label {
+  border: 1px solid rgba(17, 17, 17, 0.7);
+}
+.label-title {
+  padding-bottom: 8px;
+  display: block;
+  align-self: flex-start;
+}
+.label__icon {
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+.input:not(:-moz-placeholder-shown):valid + .label__icon {
+  background-image: url("/src/images/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.input:not(:-ms-input-placeholder):valid + .label__icon {
+  background-image: url("/src/images/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.input:not(:placeholder-shown):valid + .label__icon {
+  background-image: url("/src/images/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.input:not(:-moz-placeholder-shown):valid > .label-title {
+  color: green;
+}
+.input:not(:-ms-input-placeholder):valid > .label-title {
+  color: green;
+}
+.input:not(:placeholder-shown):valid > .label-title {
+  color: green;
+}
+.input:not(:-moz-placeholder-shown):invalid {
+  border-color: rgba(250, 0, 0, 0.8);
+}
+.input:not(:-ms-input-placeholder):invalid {
+  border-color: rgba(250, 0, 0, 0.8);
+}
+.input:not(:placeholder-shown):invalid {
+  border-color: rgba(250, 0, 0, 0.8);
 }/*# sourceMappingURL=main.css.map */
