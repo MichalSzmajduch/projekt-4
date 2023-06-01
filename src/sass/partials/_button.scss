@@ -1,0 +1,32 @@
+.btn {
+  min-width: 208px;
+  min-height: 44px;
+  font-family: var(--main-font);
+  color: var(--white-main-cl);
+  border-radius: var(--btn-border-radius);
+  background-color: var(--default-btn-color);
+  border: none;
+  margin: 0 auto;
+  padding: 10px 35px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  display: block;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--hover-btn-color);
+  }
+  &:focus {
+    background-color: var(--focus-btn-color);
+  }
+
+  @media (min-width: 768px) {
+    width: 280px;
+    height: 64px;
+  }
+}
+
+.btn--subscribe {
+  min-width: 170px;
+  min-height: 40px;
+}
