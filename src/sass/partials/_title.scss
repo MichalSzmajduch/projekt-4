@@ -19,7 +19,7 @@
     background-color: var(--black-main-cl);
     }
 
-@media screen and (min-width: 768px) {
+@include tablet {
     font-size: 44px;
     gap: 16px;
     margin-bottom: 60px;
@@ -27,7 +27,7 @@
         margin-bottom:30px;
     }
 }
-@media screen and (min-width: 1280px) {
+@include desktop {
     margin-bottom: 80px;
       &--about {
         margin-bottom:26px;
