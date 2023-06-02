@@ -99,4 +99,14 @@
 .btn--subscribe {
   min-width: 170px;
   min-height: 40px;
+}
+
+.blog__img-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 480px;
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 4px;
 }/*# sourceMappingURL=main.css.map */
