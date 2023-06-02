@@ -1,0 +1,184 @@
+.backdrop {
+  position: fixed;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  transition: opacity 0.5s linear, visibility 0.5s linear;
+
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+
+  .modal-contact {
+    transform: scale(0);
+  }
+}
+
+.modal-contact {
+  position: relative;
+  // margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 272px;
+  // min-height: 357px;
+  padding: 28px 16px;
+
+  // @include tablet {
+  //     max-width: 480px;
+  //     min-height: 511px;
+  //     padding: 48px 32px;
+  // }
+
+  // @include desktop {
+  //     max-width: 480px;
+  //     min-height: 511px;
+  //     padding: 48px 32px;
+  // }
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  // align-items: flex-start;
+  // justify-content: center;
+
+  background: #ffffff;
+
+  transition: transform 0.5s linear;
+  transform: scale(1);
+
+  &__button-close {
+    background: #ffffff;
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    border: none;
+  }
+
+  &__header {
+    // text-align: left;
+    // align-self: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+  }
+  &__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #5c5c5c;
+    margin-bottom: 4px;
+  }
+  &__container {
+    width: 100%;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+
+    &:is(:hover, :focus) .modal-contact__input {
+      border-color: rgba(17, 17, 17, 0.7);
+    }
+  }
+  &__label {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+
+    color: #5c5c5c;
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__input {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+
+    &:not(:placeholder-shown):required:valid {
+      border-color: #3cbc81;
+
+      background-color: white;
+    }
+    &:not(:placeholder-shown):required:valid .modal-contact__label {
+      color: #3cbc81;
+    }
+
+    &:not(:placeholder-shown):required:invalid {
+      border-color: #e74a3b;
+    }
+    &:not(:placeholder-shown):required:invalid .modal-contact__label {
+      color: #e74a3b;
+      background-color: white;
+    }
+  }
+
+  &__button-send {
+    width: 100%;
+    padding: 10px 101px;
+    background: rgba(232, 111, 84, 0.4);
+    border-radius: 8px;
+    border: none;
+
+    margin-top: 10px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+
+    text-align: center;
+
+    color: #ffffff;
+    .modal-contact__input:not(:placeholder-shown):required:valid
+      + .modal-contact__button-send:active {
+      background: #e86f54;
+    }
+  }
+  // &__input:not(:placeholder-shown) {border-color:
+
+  // .modal__button-send:enabled {
+  //     background: #e86f54;
+  // }
+}
