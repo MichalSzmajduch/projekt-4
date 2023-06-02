@@ -1,7 +1,7 @@
-@import './partials/variables';
+@import './utils/variables';
+@import './utils/mixins';
 @import './partials/title';
 @import './partials/btn';
-@import './utils/mixins';
 @import './partials/global';
 @import './partials/about';
 @import './partials/blog';
@@ -9,7 +9,7 @@
 @import './partials/footer';
 @import './partials/header';
 @import './partials/hero';
-@import './partials/modal-sub';
+@import './partials/modal-subscribe';
 @import './partials/store';
 @import './partials/button';
 @import './partials/typography';

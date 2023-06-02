@@ -1,0 +1,120 @@
+.delivery {
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+  &--header {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 0.82;
+    text-transform: uppercase;
+    @include tablet {
+      font-size: 44px;
+      padding-left: 24px;
+    }
+  }
+  &--line {
+    display: inline-block;
+    height: 1px;
+    background-color: var(--black-text-color);
+    margin-left: 16px;
+    padding-right: 24px;
+    width: 100vw;
+    @include tablet {
+      padding-right: 26px;
+    }
+  }
+  &__background-img {
+    background-image: url(../images/image_delivery_mobile.jpg);
+    background-size: cover;
+    padding: 68px 160px;
+    margin: 0 auto;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/image_delivery_tablet@2x.jpg);
+    }
+    @include tablet {
+      padding: 132px;
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/image_delivery_tablet@2x.jpg);
+      }
+    }
+    @include desktop {
+      padding: 200px;
+    }
+  }
+}
+ul {
+  counter-reset: list-counter;
+}
+li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.82;
+  @include tablet {
+    font-size: 24px;
+    line-height: 0.82px;
+  }
+}
+li:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: counter(list-counter);
+  counter-increment: list-counter;
+  position: absolute;
+  border: 1px solid var(--black-text-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  @include tablet {
+    width: 64px;
+    height: 64px;
+    margin-left: 24px;
+  }
+  @include desktop {
+    margin-left: 96px;
+  }
+}
+
+.order__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style-type: none;
+  gap: 25px;
+  padding: 16px;
+  margin-bottom: 35px;
+  @include tablet {
+    gap: 57px;
+    padding: 24px;
+    margin-bottom: 40px;
+    padding-right: 67px;
+  }
+  @include desktop {
+    margin-bottom: 64px;
+    gap: 52px;
+    padding-right: 220px;
+  }
+  &--text {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 48px;
+    text-align: left;
+    @include tablet {
+      margin-left: 108px;
+      font-size: 32px;
+      line-height: 0.82;
+    }
+    @include desktop {
+      margin-left: 184px;
+    }
+  }
+}
