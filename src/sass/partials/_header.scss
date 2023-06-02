@@ -1,0 +1,16 @@
+.page-header {
+  background-color: #f00808;
+}
+
+.container {
+  max-width: 480px;
+  padding: 16px 16px 0px 16px;
+  margin: 0px auto;
+  width: 100%;
+  border: #f00808 1px solid;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
