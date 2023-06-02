@@ -1,29 +1,43 @@
-<container>
-  <h2>BLOG</h2>
-  <div class="blog">
-    <div class="blog__img-box">
-      <img
-        src="../images/flowers image4_tablet.jpg"
-        alt="roslina"
-        width="136"
-        height="181"
-        class="blog__img"
-      />
-      <img
-        src="../images/flowers image5_tablet.jpg"
-        alt="kwiat"
-        width="136"
-        height="181"
-        class="blog__img"
-      />
-    </div>
-    <div>
-      <svg width="61" height="61" class="blog__icon"><use></use></svg>
-      <svg width="61" height="61" class="blog__icon"><use></use></svg>
-    </div>
-    <div class="blog__newsletter">
-      <p class="blog__text">Follow to our newsletter</p>
-      <button type="button" class="btn btn--subscribe" class="blog__btn">Subscribe</button>
-    </div>
-  </div>
-</container>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="../sass/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <container class="container">
+      <h2>BLOG</h2>
+      <div class="blog">
+        <div class="blog__img-box">
+          <img
+            src="../images/flowers image4_tablet.jpg"
+            alt="roslina"
+            width="136"
+            height="181"
+            class="blog__img"
+          />
+          <img
+            src="../images/flowers image5_tablet.jpg"
+            alt="kwiat"
+            width="136"
+            height="181"
+            class="blog__img"
+          />
+        </div>
+        <div>
+          <svg class="blog__icon">
+            <use href="../images/icons.svg#icon-call-us"></use>
+          </svg>
+          <svg class="blog__icon"><use></use></svg>
+        </div>
+        <div class="blog__newsletter">
+          <p class="blog__text">Follow to our newsletter</p>
+          <button type="button" class="btn btn--subscribe" class="blog__btn">Subscribe</button>
+        </div>
+      </div>
+    </container>
+  </body>
+</html>
