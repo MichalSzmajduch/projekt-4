@@ -20,7 +20,7 @@
         background-color: var(--focus-btn-color);
     }
 
-    @media (min-width: 768px){
+    @include tablet {
         width: 280px;
         height: 64px;
     }
@@ -31,3 +31,49 @@
     min-width: 170px;
     min-height: 40px;
 }
+
+.btn-send {
+    width: 100%;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--default-btn-color);
+    border-radius: 8px;
+    border: none;
+    color: var(--white-main-cl);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+
+  @include tablet {
+    height: 50px;
+    font-size: 18px;
+  }
+    // color button przed wprowadzeniem danych do inputów !!!
+//   &:disabled {
+//     background: var(--disablet-btn-color); 
+//   }
+}
+
+.btn-subscribe {
+    width: 236px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--default-btn-color);
+    border: none;
+    border-radius: 8px;
+    color: var(--white-main-cl);
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include tablet {
+        width: 336px;
+        height: 50px;
+        font-size: 18px;
+    }
+}   
