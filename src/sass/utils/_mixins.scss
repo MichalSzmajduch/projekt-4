@@ -1,6 +1,6 @@
 // zamiast map-get($color, 'background');
 @function getColor($key) {
-  @return map-get($fontcolors, $key);
+  @return map-get($colors, $key);
 }
 
 //   przykład uzycia :
