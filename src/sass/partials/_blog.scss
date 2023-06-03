@@ -19,6 +19,8 @@
     margin: 0 auto;
   }
   &__img {
+    min-width: 136px;
+    width: 100%;
     height: auto;
     justify-content: center;
   }
