@@ -1,7 +1,6 @@
 .delivery {
   display: flex;
   align-items: center;
-  padding: 0px 16px;
   &--header {
     font-family: var(--main-font);
     font-weight: 700;
@@ -25,22 +24,9 @@
     }
   }
   &__background-img {
-    background-image: url(../images/image_delivery_mobile.jpg);
     background-size: cover;
-    padding: 68px 160px;
-    margin: 0 auto;
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(../images/image_delivery_tablet@2x.jpg);
-    }
-    @include tablet {
-      padding: 132px;
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url(../images/image_delivery_tablet@2x.jpg);
-      }
-    }
-    @include desktop {
-      padding: 200px;
-    }
+    width: 100%;
+    margin-bottom: 76px;
   }
 }
 ul {
@@ -77,7 +63,7 @@ li:before {
     margin-left: 24px;
   }
   @include desktop {
-    margin-left: 96px;
+    margin-left: 86px;
   }
 }
 
@@ -87,11 +73,10 @@ li:before {
   justify-content: space-evenly;
   list-style-type: none;
   gap: 25px;
-  padding: 16px;
   margin-bottom: 35px;
+  padding-top: 60px;
   @include tablet {
     gap: 57px;
-    padding: 24px;
     margin-bottom: 40px;
     padding-right: 67px;
   }
@@ -99,6 +84,7 @@ li:before {
     margin-bottom: 64px;
     gap: 52px;
     padding-right: 220px;
+    padding: 91px 0 82px 0;
   }
   &--text {
     font-family: var(--main-font);
@@ -114,7 +100,7 @@ li:before {
       line-height: 0.82;
     }
     @include desktop {
-      margin-left: 184px;
+      margin-left: 194px;
     }
   }
 }
