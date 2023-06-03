@@ -20,8 +20,7 @@
         </p>
         <div class="modal-contact__container">
           <form class="modal-contact__form" name="leave-your-details">
-            <label class="modal-contact__label"
-              >Name
+            <div class="modal-contact__input-wrap">
               <input
                 type="text"
                 name="username"
@@ -31,9 +30,9 @@
                 required
                 class="modal-contact__input"
               />
-            </label>
-            <label class="modal-contact__label"
-              >Email
+              <label class="modal-contact__label">Name </label>
+            </div>
+            <div class="modal-contact__input-wrap">
               <input
                 type="email"
                 name="email"
@@ -43,8 +42,9 @@
                 required
                 class="modal-contact__input"
               />
-            </label>
-            <button class="modal-contact__button-send btn-send" type="submit">Send</button>
+              <label class="modal-contact__label">Email </label>
+            </div>
+            <button class="modal-contact__button-send" type="submit">Send</button>
           </form>
         </div>
       </div>
