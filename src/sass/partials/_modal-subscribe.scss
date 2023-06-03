@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  &__container {
+  &container {
     position: relative;
     background-color: #fff;
     max-width: 644px;
@@ -16,13 +16,13 @@
     max-height: 90%;
     overflow-y: auto;
   }
-  &__content {
+  &content {
     padding: 0 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  &__close {
+  &close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -30,7 +30,7 @@
     border: none;
     cursor: pointer;
   }
-  &__image {
+  &image {
     text-align: center;
     margin-bottom: 20px;
     & img {
@@ -38,24 +38,53 @@
       display: block;
     }
   }
-  &__title {
+  &title {
     font-size: 24px;
     margin: 0;
     text-align: center;
   }
-  &__text {
+  &text {
     margin-bottom: 10px;
     text-align: center;
     margin: 14px 0 18px 0;
   }
-  &__label {
+  &label {
     width: 100%;
     margin-bottom: 18px;
   }
-  &__input {
+  &input {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+
+    padding: 10px 12px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
     width: 100%;
-    &::placeholder {
-      padding-left: 12px;
+
+    color: getColor('input-text-color');
+    background-color: getColor('input-text-color');
+    outline: none;
+
+    transition-property: border-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:not(:placeholder-shown):required:valid {
+      border-color: #3cbc81;
+    }
+
+    &:not(:placeholder-shown):required:valid .modallabel {
+      color: #3cbc81;
+    }
+
+    &:not(:placeholder-shown):required:invalid {
+      border-color: #e74a3b;
+    }
+    &:not(:placeholder-shown):required:invalid .modallabel {
+      color: #e74a3b;
     }
   }
   &__button {
