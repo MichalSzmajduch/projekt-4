@@ -121,11 +121,18 @@
     @include desktop {
       gap: 24px;
     }
-    // &:focus-within + .modal-contact__button-send {
-    //     background-color: #e86f54;
-    // }
+    &:invalid .modal-container__button-send {
+      background-color: red;
+      // background-color: var(--disablet-btn-color);
+    }
+    &:valid .modal-container__button-send {
+      background-color: blue;
+    }
   }
   &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -146,10 +153,6 @@
     flex-direction: column;
     gap: 8px;
 
-    &:is(:hover, :focus) .modal-contact__input {
-      border-color: rgba(17, 17, 17, 0.7);
-    }
-
     @include tablet {
       font-size: 14px;
       line-height: 1.214px;
@@ -159,7 +162,12 @@
       line-height: 1.214;
     }
   }
+  &__input-wrap {
+    position: relative;
+    width: 100%;
+  }
   &__input {
+    width: 100%;
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 500;
@@ -177,6 +185,12 @@
     border: 1px solid #d7d7d7;
     border-radius: 4px;
 
+    margin-top: 20px;
+
+    &:is(:hover, :focus) {
+      border-color: rgba(17, 17, 17, 0.7);
+    }
+
     @include tablet {
       font-size: 14px;
       line-height: 1.214;
@@ -193,28 +207,25 @@
       padding-left: 16px;
     }
 
-    &:not(:placeholder-shown):required:valid {
-      border-color: #3cbc81;
-
-      background-color: getColor('white-bg-color');
-    }
-    &:not(:placeholder-shown):required:valid .modal-contact__label {
+    &:not(:placeholder-shown):required:valid + .modal-contact__label {
       color: #3cbc81;
     }
+    &:not(:placeholder-shown):required:valid {
+      border-color: #3cbc81;
+    }
 
+    &:not(:placeholder-shown):required:invalid + .modal-contact__label {
+      color: #e74a3b;
+    }
     &:not(:placeholder-shown):required:invalid {
       border-color: #e74a3b;
-    }
-    &:not(:placeholder-shown):required:invalid .modal-contact__label {
-      color: #e74a3b;
-      background-color: getColor('white-bg-color');
     }
   }
 
   &__button-send {
     width: 100%;
     padding: 10px 101px;
-    background: var(--disablet-btn-color);
+
     border-radius: 8px;
     border: none;
 
@@ -243,9 +254,5 @@
       line-height: 1.222;
       padding: 14px 184px;
     }
-  }
-  .modal-contact__input:not(:placeholder-shown):required:valid
-    + .modal-contact__button-send:enabled {
-    background-color: #e86f54;
   }
 }
