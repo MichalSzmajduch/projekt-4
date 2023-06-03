@@ -31,10 +31,18 @@
             box.
           </p>
           <label class="modal__label" for="email"
-            >Email
-            <input type="email" class="modal__input" placeholder="Your email" id="email" />
-          </label>
-          <button class="modal__button">Subscribe</button>
+      >Email
+      <input 
+      type="email"
+      name="email"
+      placeholder="Your email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      title="Enter your email"
+      required
+      class="modal__input"
+      id="email" />
+    </label>
+          <button class="modal__button btn btn--subscribe">Subscribe</button>
         </div>
       </div>
     </div>
