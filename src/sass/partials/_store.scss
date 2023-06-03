@@ -15,10 +15,10 @@
   }
 
   &__item {
-    flex-basis: calc((100%-16px) / 2);
+    flex-basis: calc((100% - 16px) / 2);
 
     @include tablet {
-      flex-basis: calc((100%-32px) / 2);
+      flex-basis: calc((100% - 32px) / 2);
     }
   }
   &__img {
