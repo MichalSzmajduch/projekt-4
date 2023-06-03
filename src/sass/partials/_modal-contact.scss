@@ -30,21 +30,23 @@
 
   padding: 28px 16px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
   @include tablet {
     max-width: 480px;
     min-height: 511px;
     padding: 48px 32px;
+    gap: 24px;
   }
 
   @include desktop {
     max-width: 480px;
     min-height: 511px;
     padding: 48px 32px;
+    gap: 24px;
   }
-
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
 
   background: getColor('white-bg-color');
 
@@ -63,23 +65,44 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    font-family: 'Montserrat';
+    font-family: var(--main-font);
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
 
-    color: #000000;
+    color: getColor('black-text-color');
+
+    @include tablet {
+      font-size: 32px;
+      line-height: 1.219;
+    }
+    @include desktop {
+      font-size: 32px;
+      line-height: 1.219;
+    }
   }
+
   &__text {
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 1.25;
+    margin-bottom: 4px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    @include desktop {
+      font-size: 16px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
 
     color: getColor('form-text-color');
-    margin-bottom: 4px;
   }
   &__container {
     width: 100%;
@@ -91,6 +114,16 @@
     align-items: center;
     flex-grow: 1;
     width: 100%;
+
+    @include tablet {
+      gap: 24px;
+    }
+    @include desktop {
+      gap: 24px;
+    }
+    // &:focus-within + .modal-contact__button-send {
+    //     background-color: #e86f54;
+    // }
   }
   &__label {
     width: 100%;
@@ -101,9 +134,12 @@
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
-    line-height: 12px;
+    line-height: 1.2;
 
     color: getColor('form-text-color');
+    &:not(:placeholder-shown):required:valid {
+      color: #3cbc81;
+    }
 
     flex-grow: 1;
     display: flex;
@@ -113,13 +149,23 @@
     &:is(:hover, :focus) .modal-contact__input {
       border-color: rgba(17, 17, 17, 0.7);
     }
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.214px;
+    }
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.214;
+    }
   }
   &__input {
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 1.25;
+    outline: none;
 
     color: getColor('input-text-color');
     background-color: getColor('white-bg-color');
@@ -130,6 +176,22 @@
 
     border: 1px solid #d7d7d7;
     border-radius: 4px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.214;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 16px;
+    }
+
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.214;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 16px;
+    }
 
     &:not(:placeholder-shown):required:valid {
       border-color: #3cbc81;
@@ -158,19 +220,32 @@
 
     margin-top: 10px;
 
-    font-family: 'Montserrat';
+    font-family: var(--main-font);
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 1.214;
 
     text-align: center;
 
     color: getColor('white-text-color');
 
-    .modal-contact__input:not(:placeholder-shown):required:valid
-      + .modal-contact__button-send:active {
-      background: #e86f54;
+    @include tablet {
+      margin-top: 14px;
+      font-size: 18px;
+      line-height: 1.222;
+      padding: 14px 184px;
     }
+
+    @include desktop {
+      margin-top: 14px;
+      font-size: 18px;
+      line-height: 1.222;
+      padding: 14px 184px;
+    }
+  }
+  .modal-contact__input:not(:placeholder-shown):required:valid
+    + .modal-contact__button-send:enabled {
+    background-color: #e86f54;
   }
 }
