@@ -12,13 +12,16 @@
   z-index: 999;
   &__container {
     position: relative;
-    background-color: #fff;
+    background-color: getColor('white-bg-color');
     max-width: 644px;
     width: 90%;
     max-height: 90%;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    @include tablet {
+      max-width: 588px;
+    }
     @include desktop {
       flex-direction: row;
       max-width: 860px;
@@ -26,8 +29,7 @@
   }
 
   &__content {
-    padding: 0 16px;
-    max-width: 336px;
+    max-width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,16 +44,18 @@
   }
   &__close {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 17px;
+    right: 17px;
     background: none;
     border: none;
     cursor: pointer;
     & svg {
-      width: 18px;
-      height: 18px;
-      fill: black;
-      stroke: black;
+      width: 12px;
+      height: 12px;
+      @include tablet {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
   &__image {
@@ -62,6 +66,7 @@
       height: 100%;
       @include desktop {
         width: 428px;
+        height: 528px;
       }
     }
     @include desktop {
@@ -75,7 +80,6 @@
     font-weight: 600;
     @include tablet {
       font-size: 28px;
-      white-space: none;
     }
   }
   &__text {
@@ -89,12 +93,26 @@
       font-size: 16px;
     }
   }
+
+  &__form {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
   &__label {
     width: 100%;
     margin-bottom: 18px;
+    font-size: 10px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--form-text-color);
+    @include tablet {
+      font-size: 14;
+    }
   }
   &__input {
-    font-family: 'Montserrat';
+    font-family: var(--main-font);
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -104,32 +122,39 @@
     border: 1px solid #d7d7d7;
     border-radius: 4px;
     width: 100%;
-
-    color: getColor('input-text-color');
-    background-color: getColor('input-text-color');
+    color: #111111;
     outline: none;
 
     transition-property: border-color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
     &:not(:placeholder-shown):required:valid {
       border-color: #3cbc81;
     }
 
-    &:not(:placeholder-shown):required:valid .modallabel {
+    &:not(:placeholder-shown):required:valid + .modal__label {
       color: #3cbc81;
     }
 
     &:not(:placeholder-shown):required:invalid {
       border-color: #e74a3b;
     }
-    &:not(:placeholder-shown):required:invalid .modallabel {
+    &:not(:placeholder-shown):required:invalid + .modal__label {
       color: #e74a3b;
+    }
+    @include tablet {
+      font-size: 14px;
+      padding: 16px 12px;
     }
   }
   &__button {
     margin-bottom: 28px;
+    margin-top: 18px;
   }
 }
 .is-hidden {
