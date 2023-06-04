@@ -1,6 +1,6 @@
 .subtitle {
   font-family: var(--main-font);
-  color: var(--black-main-cl);
+  color: var(--black-text-color);
   display: flex;
   align-items: center;
   text-align: left;
@@ -38,7 +38,7 @@
 .small-title {
   text-align: left;
   font-family: var(--main-font);
-  color: var(--black-main-cl);
+  color: var(--black-text-color);
   width: 100%;
   white-space: nowrap;
   margin-bottom: 6px;
