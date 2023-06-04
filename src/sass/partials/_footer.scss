@@ -10,9 +10,7 @@ padding: 32px 0px;
 }
 &__wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  
+    justify-content: center;    
 }
 &__header {
     font-family: var(--footer-font);
@@ -86,7 +84,8 @@ padding: 32px 0px;
 }
 &__logo {
     fill: var(--white-bg-color);
-}
+
+} 
 }
 
 .container {
