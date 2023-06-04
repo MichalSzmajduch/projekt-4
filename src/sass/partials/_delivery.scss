@@ -29,45 +29,7 @@
     margin-bottom: 76px;
   }
 }
-ul {
-  counter-reset: list-counter;
-}
-li {
-  display: flex;
-  align-items: center;
-  position: relative;
-  font-family: var(--main-font);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 0.82;
-  @include tablet {
-    font-size: 24px;
-    line-height: 0.82px;
-  }
-}
-li:before {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  content: counter(list-counter);
-  counter-increment: list-counter;
-  position: absolute;
-  border: 1px solid var(--black-text-color);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  @include tablet {
-    width: 64px;
-    height: 64px;
-    margin-left: 24px;
-  }
-  @include desktop {
-    margin-left: 86px;
-  }
-}
-
-.order__list {
+.order {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -75,6 +37,7 @@ li:before {
   gap: 25px;
   margin-bottom: 35px;
   padding-top: 60px;
+  counter-reset: list-counter;
   @include tablet {
     gap: 57px;
     margin-bottom: 40px;
@@ -86,21 +49,55 @@ li:before {
     padding-right: 220px;
     padding: 91px 0 82px 0;
   }
-  &--text {
+  &__list {
+    display: flex;
+    align-items: center;
+    position: relative;
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    margin-left: 48px;
-    text-align: left;
+    font-size: 20px;
+    line-height: 0.82;
     @include tablet {
-      margin-left: 108px;
-      font-size: 32px;
-      line-height: 0.82;
+      font-size: 24px;
+      line-height: 0.82px;
     }
-    @include desktop {
-      margin-left: 194px;
+    &--text {
+      font-family: var(--main-font);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      margin-left: 48px;
+      text-align: left;
+      @include tablet {
+        margin-left: 108px;
+        font-size: 32px;
+        line-height: 0.82;
+      }
+      @include desktop {
+        margin-left: 194px;
+      }
+    }
+    &:before {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      content: counter(list-counter);
+      counter-increment: list-counter;
+      position: absolute;
+      border: 1px solid var(--black-text-color);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      @include tablet {
+        width: 64px;
+        height: 64px;
+        margin-left: 24px;
+      }
+      @include desktop {
+        margin-left: 86px;
+      }
     }
   }
 }
