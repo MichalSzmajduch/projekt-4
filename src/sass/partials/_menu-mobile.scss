@@ -8,57 +8,6 @@
   z-index: 999;
 }
 
-.menu-toggle {
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  color: #000000;
-
-  &__close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    @include tablet {
-      display: none;
-    }
-  }
-
-  // &__close:is(:hover, :focus) {
-  //   fill: #2196f3;
-  // }
-}
-.menu-toggle:is(:hover, :focus) {
-  fill: var(--focus-btn-color);
-}
-
 .menu-container.is-open {
   transform: translateX(0);
-}
-
-.mobile-menu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-  margin: auto;
-  padding: 0px;
-  text-align: center;
-  &__link {
-    color: var(--white-text-color);
-    text-decoration: none;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.2;
-  }
-
-  &__link:is(:hover, :focus) {
-    font-weight: bold;
-  }
 }

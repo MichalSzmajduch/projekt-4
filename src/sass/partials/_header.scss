@@ -117,6 +117,7 @@
     cursor: pointer;
     border: none;
     outline: none;
+    fill: #ffff;
     @include tablet {
       display: none;
     }
@@ -153,6 +154,6 @@
   }
 
   &__link:is(:hover, :focus) {
-    color: var(--focus-btn-color);
+    font-weight: bold;
   }
 }
