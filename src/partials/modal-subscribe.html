@@ -23,7 +23,14 @@
       </p>
       <label class="modal__label" for="email"
         >Email
-        <input type="email" class="modal__input" placeholder="Your email" id="email" />
+        <input
+          type="email"
+          class="modal_input"
+          placeholder="Your email"
+          pattern="[a-z0-9.%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"
+          id="email"
+          required
+        />
       </label>
       <button class="modal__button">Subscribe</button>
     </div>
