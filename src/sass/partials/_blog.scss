@@ -17,12 +17,19 @@
     height: auto;
     justify-content: center;
     margin: 0 auto;
+    @include tablet {
+      max-width: 768px;
+      gap: 32px;
+    }
   }
   &__img {
     min-width: 136px;
     width: 100%;
     height: auto;
     justify-content: center;
+    @include tablet {
+      max-width: 344px;
+    }
   }
   &__icon-box {
     display: flex;
@@ -43,10 +50,20 @@
     margin: 0 auto;
     flex-direction: column;
     margin-top: 14px;
+    @include tablet {
+      margin-top: 18px;
+    }
   }
   &__text {
     display: flex;
     justify-content: center;
     margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.21;
+    @include tablet {
+      font-size: 32px;
+      line-height: 1.02;
+    }
   }
 }
