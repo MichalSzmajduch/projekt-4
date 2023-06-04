@@ -153,6 +153,6 @@
   }
 
   &__link:is(:hover, :focus) {
-    color: #2196f3;
+    color: var(--focus-btn-color);
   }
 }
