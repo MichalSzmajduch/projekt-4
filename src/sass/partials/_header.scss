@@ -26,7 +26,7 @@
   }
 
   &__logo:is(:hover, :focus) {
-    fill: #2196f3;
+    fill: var(--focus-btn-color);
   }
 
   &__buttons {
@@ -123,11 +123,11 @@
   }
 
   &__close:is(:hover, :focus) {
-    fill: #2196f3;
+    fill: var(--focus-btn-color);
   }
 }
 .menu-toggle:is(:hover, :focus) {
-  fill: #2196f3;
+  fill: var(--focus-btn-color);
 }
 
 .menu-container.is-open {
