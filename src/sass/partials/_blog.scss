@@ -21,6 +21,9 @@
       max-width: 768px;
       gap: 32px;
     }
+    @include desktop {
+      max-width: 1232px;
+    }
   }
   &__img {
     min-width: 136px;
@@ -30,11 +33,21 @@
     @include tablet {
       max-width: 344px;
     }
+    @include desktop {
+      max-width: 390px;
+    }
   }
   &__icon-box {
     display: flex;
     justify-content: center;
     gap: 25px;
+    margin-top: 4px;
+    @include tablet {
+      margin-top: 8px;
+    }
+    @include desktop {
+      margin-top: 18px;
+    }
   }
   &__icon {
     width: 50px;
@@ -53,6 +66,9 @@
     @include tablet {
       margin-top: 18px;
     }
+    @include desktop {
+      margin-top: 24px;
+    }
   }
   &__text {
     display: flex;
@@ -65,5 +81,13 @@
       font-size: 32px;
       line-height: 1.02;
     }
+  }
+}
+.blog__img--desktop {
+  display: none;
+  @include desktop {
+    display: flex;
+    max-width: 390px;
+    width: 100%;
   }
 }
