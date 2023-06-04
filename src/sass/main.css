@@ -19,7 +19,7 @@
 
 .subtitle {
   font-family: var(--main-font);
-  color: var(--black-main-cl);
+  color: var(--black-text-color);
   display: flex;
   align-items: center;
   text-align: left;
@@ -59,7 +59,7 @@
 .small-title {
   text-align: left;
   font-family: var(--main-font);
-  color: var(--black-main-cl);
+  color: var(--black-text-color);
   width: 100%;
   white-space: nowrap;
   margin-bottom: 6px;
@@ -72,7 +72,7 @@
   min-width: 208px;
   min-height: 44px;
   font-family: var(--main-font);
-  color: var(--white-main-cl);
+  color: var(--white-text-color);
   border-radius: var(--btn-border-radius);
   background-color: var(--default-btn-color);
   border: none;
@@ -111,7 +111,7 @@
   background-color: var(--default-btn-color);
   border-radius: 8px;
   border: none;
-  color: var(--white-main-cl);
+  color: var(--white-text-color);
   font-weight: 600;
   font-size: 14px;
   line-height: 1.21;
@@ -132,7 +132,7 @@
   background-color: var(--default-btn-color);
   border: none;
   border-radius: 8px;
-  color: var(--white-main-cl);
+  color: var(--white-text-color);
   font-family: var(--main-font);
   font-weight: 600;
   font-size: 14px;
@@ -287,6 +287,129 @@
   margin-bottom: 24px;
 }
 
+.delivery {
+  display: flex;
+  align-items: center;
+}
+.delivery--header {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .delivery--header {
+    font-size: 44px;
+    padding-left: 24px;
+  }
+}
+.delivery--line {
+  display: inline-block;
+  height: 1px;
+  background-color: var(--black-text-color);
+  margin-left: 16px;
+  padding-right: 24px;
+  width: 100vw;
+}
+@media screen and (min-width: 768px) {
+  .delivery--line {
+    padding-right: 26px;
+  }
+}
+.delivery__background-img {
+  background-size: cover;
+  width: 100%;
+  margin-bottom: 76px;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style-type: none;
+  gap: 25px;
+  margin-bottom: 35px;
+  padding-top: 60px;
+  counter-reset: list-counter;
+}
+@media screen and (min-width: 768px) {
+  .order {
+    gap: 57px;
+    margin-bottom: 40px;
+    padding-right: 67px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .order {
+    margin-bottom: 64px;
+    gap: 52px;
+    padding-right: 220px;
+    padding: 91px 0 82px 0;
+  }
+}
+.order__list {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 0.82;
+}
+@media screen and (min-width: 768px) {
+  .order__list {
+    font-size: 24px;
+    line-height: 0.82px;
+  }
+}
+.order__list--text {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 48px;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .order__list--text {
+    margin-left: 108px;
+    font-size: 32px;
+    line-height: 0.82;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .order__list--text {
+    margin-left: 194px;
+  }
+}
+.order__list:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: counter(list-counter);
+  counter-increment: list-counter;
+  position: absolute;
+  border: 1px solid var(--black-text-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 768px) {
+  .order__list:before {
+    width: 64px;
+    height: 64px;
+    margin-left: 24px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .order__list:before {
+    margin-left: 86px;
+  }
+}
+
 .page-header {
   position: fixed;
   z-index: 999;
@@ -318,7 +441,7 @@
   }
 }
 .header__logo:is(:hover, :focus) {
-  fill: #2196f3;
+  fill: var(--focus-btn-color);
 }
 .header__buttons {
   display: flex;
@@ -416,11 +539,11 @@
   }
 }
 .menu-toggle__close:is(:hover, :focus) {
-  fill: #2196f3;
+  fill: var(--focus-btn-color);
 }
 
 .menu-toggle:is(:hover, :focus) {
-  fill: #2196f3;
+  fill: var(--focus-btn-color);
 }
 
 .menu-container.is-open {
