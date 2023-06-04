@@ -150,3 +150,10 @@ padding: 32px 0px;
         width: 29px;
     }
 }
+.container-breaker{
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+    }
+}
