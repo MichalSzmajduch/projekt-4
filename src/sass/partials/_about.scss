@@ -60,4 +60,23 @@
       gap: 90px;
     }
   }
+
+  &__img {
+    min-width: 288px;
+    width: 100%;
+    display: block;
+
+    @include tablet {
+      min-width: 344px;
+    }
+
+    @include desktop {
+      min-width: 632px;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
