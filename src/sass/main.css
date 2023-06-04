@@ -461,7 +461,7 @@
   background-color: transparent;
 }
 .header__modal-btn:is(:hover, :focus) {
-  fill: #2196f3;
+  fill: var(--focus-btn-color);
   cursor: pointer;
 }
 .header__call-us {
@@ -495,7 +495,7 @@
   color: #000000;
 }
 .nav__link:is(:hover, :focus) {
-  color: #2196f3;
+  color: var(--focus-btn-color);
 }
 
 .position {

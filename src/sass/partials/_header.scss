@@ -47,7 +47,7 @@
     background-color: transparent;
   }
   &__modal-btn:is(:hover, :focus) {
-    fill: #2196f3;
+    fill: var(--focus-btn-color);
     cursor: pointer;
   }
 
@@ -79,7 +79,7 @@
     color: #000000;
   }
   &__link:is(:hover, :focus) {
-    color: #2196f3;
+    color: var(--focus-btn-color);
   }
 }
 
