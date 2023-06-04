@@ -289,6 +289,7 @@
 
 .page-header {
   position: fixed;
+  z-index: 999;
   max-height: -moz-fit-content;
   max-height: fit-content;
   width: 100%;
@@ -385,6 +386,7 @@
 
 .menu-container {
   position: fixed;
+  z-index: 999;
   inset: 0;
   display: flex;
   background-color: #e86f54;
@@ -445,6 +447,124 @@
 }
 .mobile-menu__link:is(:hover, :focus) {
   color: #2196f3;
+}
+
+.hero {
+  padding-top: 95px;
+  padding-bottom: 136px;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 119px;
+    padding-bottom: 194px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    padding-top: 149px;
+  }
+}
+.hero__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1280px) {
+  .hero__box {
+    justify-content: space-between;
+  }
+}
+.hero__title {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.21;
+  text-align: center;
+  color: var(--black-text-color);
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    transform: translate(-50%, 63%);
+    font-size: 120px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    transform: translate(-50%, 48%);
+    font-size: 160px;
+  }
+}
+.hero__subtitle {
+  width: 46px;
+  color: var(--black-text-color);
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-left: 11px;
+  margin-right: 14px;
+}
+@media screen and (min-width: 768px) {
+  .hero__subtitle {
+    width: 76px;
+    font-size: 24px;
+    margin-left: 49px;
+    margin-right: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__subtitle {
+    width: 101px;
+    font-size: 32px;
+    margin-left: 178px;
+    margin-right: 0;
+  }
+}
+.hero__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero__btn {
+  margin-left: 8px;
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .hero__btn {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__btn {
+    margin-right: 177px;
+    margin-left: 0;
+  }
+}
+.hero__icon {
+  max-width: 64px;
+  max-height: 76px;
+}
+@media screen and (min-width: 768px) {
+  .hero__icon {
+    max-width: 145px;
+    max-height: 150px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__icon {
+    max-width: 166px;
+    max-height: 166px;
+  }
 }
 
 .modal {
