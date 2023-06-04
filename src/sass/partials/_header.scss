@@ -1,5 +1,6 @@
 .page-header {
   position: fixed;
+  z-index: 999;
   max-height: fit-content;
   width: 100%;
   background-color: var(--white-bg-color);
@@ -93,6 +94,7 @@
 
 .menu-container {
   position: fixed;
+  z-index: 999;
   inset: 0;
   display: flex;
   background-color: #e86f54;
