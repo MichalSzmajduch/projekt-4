@@ -1,10 +1,18 @@
 .footer {
 background-color: var(--footer-bg-color);
 padding: 32px 0px;
+@include tablet {
+    padding-top: 60px;
+    padding-bottom: 54px;
+@include desktop {
+    padding: 72px 0px;
+}
+}
 &__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  
 }
 &__header {
     font-family: var(--footer-font);
@@ -48,26 +56,92 @@ padding: 32px 0px;
     line-height: inherit;
 }
 &__social-media {
+    stroke: var(--white-bg-color);
+}
+&__social-media-list {
+    display: flex;
+    list-style: none;
+    @include tablet {
+        flex-direction: column;
+    }
+}
+&__social-media-item {
+    margin-right: 16px;
+    &--last {
+        margin-right: 0px;
+    }
+    @include tablet {
+        margin-right: 0px;
+        margin-bottom: 16px;
+        &--last {
+            margin-bottom: 0px;
+        }
+    }
+}
+&__footer-breaker {
+    display: block;
+    @include tablet {
+        display: inline;
+    }
+}
+&__logo {
     fill: var(--white-bg-color);
 }
 }
+
 .container {
     max-width: 480px;
     margin: auto;
-    padding-left: 16px;
-    padding-right: 14px;
+    padding: 0px;
+    @include tablet {
+        max-width: 768px;
+    }
+    @include desktop {
+        max-width: 1280px;
+    }
 }
 .logo-container {
  display: none;
+ @include desktop {
+    display: block;
+    margin-right: 210px;
+ }
 }
 .nav-container {
     margin-right: 44px;
     margin-bottom: 32px;
     width: 116px;
-}
-.social-media-container {
-    margin-left: 32px;
+    @include tablet {
+        margin-bottom: 0px;
+    }
+    @include desktop {
+        margin-right: 96px;
+    }
 }
 .contact-container {
-    word-wrap: break-word;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin-right: 32px;
+    @include tablet {
+        margin-right: 65px;
+    }
+    @include desktop {
+        margin-right: 208px;
+    }
+}
+.info-container {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    @include tablet {
+        margin-right: 44px;
+    }
+    @include desktop {
+        margin-right: 96px;
+    }
+
+}
+.social-media-container {
+    padding-right: 74px;
 }
