@@ -18,25 +18,12 @@
   margin: 0;
   padding: 0;
 }
-<<<<<<< Updated upstream
-img{
+img {
   display: block;
 }
-.section{
+.section {
   padding-bottom: 60px;
   @include tablet {
-  padding-bottom: 100px;
+    padding-bottom: 100px;
   }
-
-
 }
-=======
-//.section {
-//margin-bottom: 60px;
-//@include tablet {
-//  margin-bottom: 100px;
-//}
-//@include desktop {
-//  margin-bottom: 100px;
-//}}
->>>>>>> Stashed changes
