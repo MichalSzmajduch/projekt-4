@@ -21,6 +21,10 @@
 
     }
 
+    // &__wrapper {
+    //     min-height: 274px;
+    // }
+
     &__title {
         position: absolute;
         left: 50%;
@@ -52,18 +56,18 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 1.2;
-        margin-left: 11px;
         margin-right: 14px;
+        margin-left: 11px;
         @include tablet {
             width: 76px;
             font-size: 24px;
-            margin-left: 49px;
             margin-right: 40px;
+            margin-left: 49px;
         }
         @include desktop {
             width: 101px;
             font-size: 32px;
-            margin-left: 178px;
+            margin-left: 210px;
             margin-right: 0;
         }
         }
@@ -82,21 +86,36 @@
                 margin-left: 20px;
             }
             @include desktop {
-                margin-right: 177px;
+                margin-right: 145px;
                 margin-left: 0;
             }
         }
 
         &__icon {
-            max-width: 64px;
-            max-height: 76px;
             @include tablet {
-                max-width: 145px;
-                max-height: 150px;
+            width: 145px;
+            height: 150px;
             }
             @include desktop {
-                max-width: 166px;
-                max-height: 166px;
+            width: 166px;
+            height: 166px;
+            }
+        }
+
+        &__icon--mob {
+            @include tablet {
+                opacity: 0;
+         }
+        }
+        &__icon--tab {
+             opacity: 0;
+               @media screen and (min-width: 768px) and (max-width: 1280px) {
+            opacity: 1;
+            }
+        }
+        &__icon--desk {
+              @media screen and (max-width: 1280px) {
+                opacity: 0;
             }
         }
 }
