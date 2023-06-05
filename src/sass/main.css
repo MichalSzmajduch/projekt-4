@@ -998,6 +998,18 @@ img {
   display: block;
   width: 100%;
   height: auto;
+  width: 145px;
+  height: 274px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media screen and (min-width: 768px) {
+  .hero__image {
+    width: 390px;
+    height: 636px;
+  }
 }
 .hero__btn {
   margin-left: 8px;
