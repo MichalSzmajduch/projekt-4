@@ -4,12 +4,10 @@
   padding: 0 16px;
   width: 100%;
   display: block;
-
   @include tablet {
     max-width: 768px;
     padding: 0 24px;
   }
-
   @include desktop {
     max-width: 1280px;
   }
