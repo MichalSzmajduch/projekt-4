@@ -1588,4 +1588,27 @@ img {
     line-height: 1.222;
     padding: 14px 184px;
   }
+}
+
+.footerr {
+  padding: 32px 16px;
+  background-color: red;
+  display: block;
+}
+.footerr__navi {
+  width: 116px;
+  height: auto;
+  gap: 12px;
+}
+.footerr__list {
+  list-style-type: none;
+}
+.footerr__opening {
+  display: block;
+}
+.footerr__contact {
+  display: block;
+}
+.footerr__social {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

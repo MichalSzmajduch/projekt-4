@@ -1,0 +1,23 @@
+.footerr {
+  padding: 32px 16px;
+  background-color: red;
+  display: block;
+
+  &__navi {
+    width: 116px;
+    height: auto;
+    gap: 12px;
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__opening {
+    display: block;
+  }
+  &__contact {
+    display: block;
+  }
+  &__social {
+    display: block;
+  }
+}
