@@ -6,11 +6,12 @@
     justify-content: center;
     width: 100%;
     gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 0px;
 
     @include tablet {
       gap: 32px;
       margin-bottom: 60px;
+      margin-bottom: 30px;
     }
   }
 
