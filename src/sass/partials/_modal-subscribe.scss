@@ -13,7 +13,7 @@
   &__container {
     position: relative;
     background-color: getColor('white-bg-color');
-    max-width: 360px;
+    max-width: 272px;
     width: 90%;
     max-height: 90%;
     overflow-y: auto;
@@ -60,13 +60,14 @@
   }
   &__image {
     margin-bottom: 20px;
+
     & img {
       width: 100%;
-      display: block;
       height: 100%;
+      display: block;
       @include desktop {
-        width: 428px;
-        height: 528px;
+        max-width: 428px;
+        max-height: 528px;
       }
     }
     @include desktop {
