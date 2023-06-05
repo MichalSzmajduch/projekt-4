@@ -19,11 +19,31 @@
   </head>
   <body>
     <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
+<<<<<<< Updated upstream
     <include src="../partials/example.html"></include>
     <include src="../partials/blog.html"></include>
     <include src="../partials/modal-contact.html"></include>
 
     <!-- Skrypt jest na samym dole kodu. On juz ma w sobie podłączony SAAS plik. -->
     <script src="../index.js" type="module"></script>
+=======
+
+    <include src="./partials/header.html"></include>
+    <include src="./partials/hero.html"></include>
+    <include src="./partials/about.html"></include>
+    <include src="./partials/store.html"></include>
+    <include src="./partials/delivery.html"></include>
+    <include src="./partials/blog.html"></include>
+    <include src="./partials/modal-contact.html"></include>
+    <include src="./partials/modal-subscribe.html"></include>
+    <include src="./partials/menu-mobile.html"></include>
+
+    <!-- Skrypt jest na samym dole kodu. On juz ma w sobie podłączony SAAS plik. -->
+    <script src="./index.js" type="module"></script>
+    <script defer src="./menu-mobile.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./slider_script.js"></script>
+    <script src="./modal-contact.js"></script>
+>>>>>>> Stashed changes
   </body>
 </html>
