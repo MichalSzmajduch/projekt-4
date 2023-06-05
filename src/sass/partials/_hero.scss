@@ -79,18 +79,10 @@
     height: auto;
   }
   &__btn {
-    margin-left: 8px;
     border: none;
     background-color: inherit;
     padding: 0;
     cursor: pointer;
-    @include tablet {
-      margin-left: 20px;
-    }
-    @include desktop {
-      margin-right: 145px;
-      margin-left: 0;
-    }
   }
 
   &__icon {
