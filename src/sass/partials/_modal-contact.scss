@@ -121,12 +121,12 @@
     @include desktop {
       gap: 24px;
     }
-    &:invalid .modal-container__button-send {
-      background-color: red;
+    &:invalid [type='submit'] {
+      background-color: var(--disablet-btn-color);
       // background-color: var(--disablet-btn-color);
     }
-    &:valid .modal-container__button-send {
-      background-color: blue;
+    &:valid [type='submit'] {
+      background-color: var(--default-btn-color);
     }
   }
   &__label {
