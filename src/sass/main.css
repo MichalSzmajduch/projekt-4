@@ -973,22 +973,22 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
-  margin-left: 11px;
   margin-right: 14px;
+  margin-left: 11px;
 }
 @media screen and (min-width: 768px) {
   .hero__subtitle {
     width: 76px;
     font-size: 24px;
-    margin-left: 49px;
     margin-right: 40px;
+    margin-left: 49px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__subtitle {
     width: 101px;
     font-size: 32px;
-    margin-left: 178px;
+    margin-left: 210px;
     margin-right: 0;
   }
 }
@@ -1011,24 +1011,38 @@ img {
 }
 @media screen and (min-width: 1280px) {
   .hero__btn {
-    margin-right: 177px;
+    margin-right: 145px;
     margin-left: 0;
   }
 }
-.hero__icon {
-  max-width: 64px;
-  max-height: 76px;
-}
 @media screen and (min-width: 768px) {
   .hero__icon {
-    max-width: 145px;
-    max-height: 150px;
+    width: 145px;
+    height: 150px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__icon {
-    max-width: 166px;
-    max-height: 166px;
+    width: 166px;
+    height: 166px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__icon--mob {
+    opacity: 0;
+  }
+}
+.hero__icon--tab {
+  opacity: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .hero__icon--tab {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .hero__icon--desk {
+    opacity: 0;
   }
 }
 
@@ -1048,7 +1062,7 @@ img {
 .modal__container {
   position: relative;
   background-color: #ffffff;
-  max-width: 644px;
+  max-width: 360px;
   width: 90%;
   max-height: 90%;
   overflow-y: auto;
@@ -1219,8 +1233,8 @@ img {
   }
 }
 .modal__button {
-  margin-bottom: 28px;
-  margin-top: 18px;
+  margin: 18px 0 28px 0;
+  width: 100%;
 }
 
 .is-hidden {
@@ -1315,6 +1329,7 @@ img {
 
 .backdrop {
   position: fixed;
+  z-index: 9999;
   background: rgba(0, 0, 0, 0.3);
   transition: opacity 0.5s linear, visibility 0.5s linear;
   inset: 0;
@@ -1434,11 +1449,11 @@ img {
     gap: 24px;
   }
 }
-.modal-contact__form:invalid .modal-container__button-send {
-  background-color: red;
+.modal-contact__form:invalid [type=submit] {
+  background-color: var(--disablet-btn-color);
 }
-.modal-contact__form:valid .modal-container__button-send {
-  background-color: blue;
+.modal-contact__form:valid [type=submit] {
+  background-color: var(--default-btn-color);
 }
 .modal-contact__label {
   position: absolute;
