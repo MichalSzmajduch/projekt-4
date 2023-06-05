@@ -1,25 +1,28 @@
-<section class="hero section" id="anemone">
-  <div class="hero__box container">
+    <section class="hero">
+    <div class="hero__box container">
     <h1 class="hero__title">ANEMONE</h1>
     <h2 class="hero__subtitle">flower studio</h2>
     <div>
-      <img
-        class="hero__image"
-        alt="flower"
-        src="./images/image_home_page_mobile.jpg"
-        srcset="
-          ./images/image_home_page_mobile.jpg    145w,
-          ./images/image_home_page_mobile@2x.jpg 290w,
-          ./images/image_home_page_d+t.jpg       390w,
-          ./images/image_home_page_d+t@2x.jpg    780w
-        "
-        sizes="(min-width: 768px) 390px, (min-width: 480px) 145px"
-      />
+         <img class="hero__image"
+                  srcset= "
+                        ./images/image_home_page_mobile.jpg 145w,
+                        ./images/image_home_page_mobile@2x.jpg 290w,
+                        ./images/image_home_page_d+t.jpg 390w,
+                        ./images/image_home_page_d+t@2x.jpg 780w
+                        "
+                  sizes="(min-width: 768px) 390px, (min-width: 480px) 145px, 100vw"
+                  src="./images/image_home_page_mobile.jpg"
+                  alt="flower"
+                  width="145"
+                  height="274"
+                />
     </div>
-    <button data-modal-contact-open class="hero__btn" type="button">
-      <svg width="auto" height="auto" class="hero__icon">
-        <use href="./images/icons.svg#icon-btn"></use>
+   <button data-modal-open class="hero__btn" type="button">
+      <svg width="64" height="76" class="hero__icon">
+        <use class="hero__icon--mob" href="./images/icons.svg#icon-hero_mob"></use>
+        <use class="hero__icon--tab" href="./images/icons.svg#icon-hero_tab"></use>
+        <use class="hero__icon--desk" href="./images/icons.svg#icon-hero_desk"></use>
       </svg>
-    </button>
-  </div>
-</section>
+      </button>
+    </div>
+  </section>
