@@ -5,30 +5,23 @@
       <div class="blog__img-box">
         <div class="slideshow__container">
           <picture>
-            <source
-              media="(min-width:1280px)"
-              srcset="./images/flowers_image1-desktop.jpg 1x, ./images/flowers image1-desktop@2x.jpg 2x"
-              type="image"
-            />
-            <source
-              media="(min-width:768px)"
-              srcset="./images/flowers image1-tablet.jpg 1x, ./images/flowers image1-tablet@2x.jpg 2x"
-              type="image"
-            />
-            <source
-              media="(max-width:767px)"
-              srcset="./images/flowers image1-mobile.jpg 1x, ./images/flowers image1-mobile@2x.jpg 2x"
-              type="image"
-            />
             <img
-              src="./images/flowers image1-desktop.jpg"
+              src="./images/flowers_image1-desktop.jpg"
+              srcset="images/flowers_image1-desktop.jpg 1x 390w,
+               images/flowers_image1-desktop@2x.jpg 2x 780w,
+                images/flowers_image1-tablet.jpg 1x 344w,
+                 images/flowers_image1-tablet@2x.jpg 2x 688w,
+              images/flowers_image1-mobile.jpg 1x 136w,
+               images/flowers_image1-mobile@2x.jpg 2x 272w,"
               alt="white flower"
               class="slide"
               loading="lazy"
               width="315"
               height="369"
+              sizes="(min-width 1280px) 390px, (min-width: 768px) 344px, (max-width: 767px) 136px, 100vw"
             />
           </picture>
+
           <picture>
             <source
               media="(min-width:1280px)"
