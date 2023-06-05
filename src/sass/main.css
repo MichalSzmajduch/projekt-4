@@ -172,6 +172,8 @@
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .section {
@@ -642,18 +644,18 @@ img {
   fill: var(--white-bg-color);
 }
 
-.container {
+.container-foot {
   max-width: 480px;
   margin: auto;
   padding: 0px;
 }
 @media screen and (min-width: 768px) {
-  .container {
+  .container-foot {
     max-width: 768px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .container {
+  .container-foot {
     max-width: 1280px;
   }
 }
@@ -1048,7 +1050,7 @@ img {
 .modal__container {
   position: relative;
   background-color: #ffffff;
-  max-width: 644px;
+  max-width: 360px;
   width: 90%;
   max-height: 90%;
   overflow-y: auto;
@@ -1219,8 +1221,8 @@ img {
   }
 }
 .modal__button {
-  margin-bottom: 28px;
-  margin-top: 18px;
+  margin: 18px 0 28px 0;
+  width: 100%;
 }
 
 .is-hidden {
@@ -1315,6 +1317,7 @@ img {
 
 .backdrop {
   position: fixed;
+  z-index: 9999;
   background: rgba(0, 0, 0, 0.3);
   transition: opacity 0.5s linear, visibility 0.5s linear;
   inset: 0;
@@ -1434,11 +1437,11 @@ img {
     gap: 24px;
   }
 }
-.modal-contact__form:invalid .modal-container__button-send {
-  background-color: red;
+.modal-contact__form:invalid [type=submit] {
+  background-color: var(--disablet-btn-color);
 }
-.modal-contact__form:valid .modal-container__button-send {
-  background-color: blue;
+.modal-contact__form:valid [type=submit] {
+  background-color: var(--default-btn-color);
 }
 .modal-contact__label {
   position: absolute;
