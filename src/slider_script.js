@@ -1,20 +1,23 @@
-var slides = document.getElementsByClassName("slide");
-var prevButton = document.getElementById("prev-btn");
-var nextButton = document.getElementById("next-btn");
+var slides = document.getElementsByClassName('slide');
+var prevButton = document.getElementById('prev-btn');
+var nextButton = document.getElementById('next-btn');
 var currentIndex = 0;
 
 function showSlide(index) {
   if (index < 0) {
     currentIndex = slides.length - 1;
   } else if (index >= slides.length) {
-    currentIndex = 0;
+    currentIndex = 1;
   }
 
   for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = 'none';
   }
 
-  slides[currentIndex].style.display ="flex";
+  slides[currentIndex].style.display = 'flex';
+  const moveToSlide = slideIndex => {
+    slideContainer.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+  };
 }
 
 function showNextSlide() {
@@ -27,7 +30,7 @@ function showPreviousSlide() {
   showSlide(currentIndex);
 }
 
-prevButton.addEventListener("click", showPreviousSlide);
-nextButton.addEventListener("click", showNextSlide);
+prevButton.addEventListener('click', showPreviousSlide);
+nextButton.addEventListener('click', showNextSlide);
 
 showSlide(currentIndex);

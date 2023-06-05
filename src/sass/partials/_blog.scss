@@ -92,12 +92,17 @@
   }
 }
 .slideshow__container {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .slide {
-  display: none;
-  max-width: 100%;
+  flex: 0 0 50%;
+  @include desktop {
+    flex: 0 0 0 50%;
+  }
+}
+.slide-in {
+  width: 100%;
   height: auto;
 }
-
-
