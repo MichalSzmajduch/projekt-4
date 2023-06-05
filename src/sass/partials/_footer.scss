@@ -47,6 +47,13 @@ padding: 32px 0px;
     color: inherit;
     font-size: inherit;
     line-height: inherit;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+        color: var(--hover-btn-color);
+    }
 }
 &__address {
     font-style: normal;
@@ -58,6 +65,13 @@ padding: 32px 0px;
 }
 &__social-media {
     stroke: var(--white-bg-color);
+    transition-property: stroke;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        stroke: var(--hover-btn-color);
+    }
 }
 &__social-media-list {
     display: flex;
@@ -79,6 +93,7 @@ padding: 32px 0px;
         }
     }
 }
+
 &__footer-breaker {
     display: block;
     @include tablet {
