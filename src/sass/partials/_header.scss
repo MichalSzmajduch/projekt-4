@@ -54,6 +54,14 @@
   &__call-us {
     max-width: 22px;
     max-height: 22px;
+    @include tablet {
+      max-width: 24px;
+      max-height: 24px;
+    }
+    @include desktop {
+      max-width: 28px;
+      max-height: 28px;
+    }
   }
 }
 
