@@ -975,22 +975,22 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
-  margin-left: 11px;
   margin-right: 14px;
+  margin-left: 11px;
 }
 @media screen and (min-width: 768px) {
   .hero__subtitle {
     width: 76px;
     font-size: 24px;
-    margin-left: 49px;
     margin-right: 40px;
+    margin-left: 49px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__subtitle {
     width: 101px;
     font-size: 32px;
-    margin-left: 178px;
+    margin-left: 210px;
     margin-right: 0;
   }
 }
@@ -1013,24 +1013,38 @@ img {
 }
 @media screen and (min-width: 1280px) {
   .hero__btn {
-    margin-right: 177px;
+    margin-right: 145px;
     margin-left: 0;
   }
 }
-.hero__icon {
-  max-width: 64px;
-  max-height: 76px;
-}
 @media screen and (min-width: 768px) {
   .hero__icon {
-    max-width: 145px;
-    max-height: 150px;
+    width: 145px;
+    height: 150px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__icon {
-    max-width: 166px;
-    max-height: 166px;
+    width: 166px;
+    height: 166px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__icon--mob {
+    opacity: 0;
+  }
+}
+.hero__icon--tab {
+  opacity: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .hero__icon--tab {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .hero__icon--desk {
+    opacity: 0;
   }
 }
 
