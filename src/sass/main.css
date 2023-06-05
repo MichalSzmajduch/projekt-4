@@ -936,10 +936,20 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 11px;
+  padding-right: 5px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .hero__box {
+    padding-left: 49px;
+    padding-right: 5px;
+  }
 }
 @media screen and (min-width: 1280px) {
   .hero__box {
-    justify-content: space-between;
+    padding-left: 210px;
+    padding-right: 145px;
   }
 }
 .hero__title {
@@ -976,22 +986,19 @@ img {
   font-size: 14px;
   line-height: 1.2;
   margin-right: 14px;
-  margin-left: 11px;
 }
 @media screen and (min-width: 768px) {
   .hero__subtitle {
     width: 76px;
     font-size: 24px;
     margin-right: 40px;
-    margin-left: 49px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__subtitle {
     width: 101px;
     font-size: 32px;
-    margin-left: 210px;
-    margin-right: 0;
+    margin-right: 110px;
   }
 }
 .hero__image {
@@ -1017,14 +1024,19 @@ img {
     margin-left: 0;
   }
 }
+.hero__icon {
+  margin-left: 8px;
+}
 @media screen and (min-width: 768px) {
   .hero__icon {
     width: 145px;
     height: 150px;
+    margin-left: 20px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__icon {
+    margin-left: 110px;
     width: 166px;
     height: 166px;
   }
