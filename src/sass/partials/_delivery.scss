@@ -23,8 +23,8 @@
   justify-content: space-evenly;
   list-style-type: none;
   gap: 25px;
-  margin-bottom: 35px;
-  padding-top: 60px;
+  margin-bottom: 32px;
+
   counter-reset: list-counter;
   @include tablet {
     gap: 57px;
@@ -35,7 +35,6 @@
     margin-bottom: 64px;
     gap: 52px;
     padding-right: 220px;
-    padding: 91px 0 82px 0;
   }
   &__list {
     display: flex;
@@ -55,13 +54,12 @@
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
-      line-height: 17px;
+      line-height: 1.21;
       margin-left: 48px;
       text-align: left;
       @include tablet {
         margin-left: 108px;
         font-size: 32px;
-        line-height: 0.82;
       }
       @include desktop {
         margin-left: 194px;
