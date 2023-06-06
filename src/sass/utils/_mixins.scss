@@ -1,0 +1,48 @@
+// zamiast map-get($color, 'background');
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+//   przykład uzycia :
+// .class{
+//     color: getColor("font-3");
+// }
+
+// Zadziała tylko, jeśli zmienne kolorów będą zapisane w pliku w ten sposób :
+
+// $colors: (
+//   "deafult-1": #212121,
+//   "deafult-2": #ffffff,
+//     etc
+//     etc }
+
+// mixin media :
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+// przykładuzycia :
+//  .logo {
+//   font-weight: 700;
+//   font-size: 24px;
+//   line-height: 1.2;
+//   &__box{
+
+//   }
+
+//   @include tablet {
+//   font-size:20px;npm
+//   }
+//   @include desktop {
+//     font-size: 26px;
+//   }
+// }

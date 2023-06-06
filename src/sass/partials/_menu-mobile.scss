@@ -1,0 +1,13 @@
+.menu-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  background-color: var(--menu-mobile-bg-color);
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  z-index: 999;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}

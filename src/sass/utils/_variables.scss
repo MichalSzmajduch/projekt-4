@@ -1,0 +1,45 @@
+:root {
+  // Fonts
+  --main-font: 'Montserrat', sans-serif;
+  --footer-font: 'Inter', sans-serif;
+  // Colors
+  --white-bg-color: #ffffff;
+  --footer-bg-color: #000000;
+  --menu-mobile-bg-color: #e86f54;
+  --modal-bg-color: rgba(0, 0, 0, 0.3);
+  // Text colors
+  --black-text-color: #000000;
+  --white-text-color: #ffffff;
+  --form-text-color: #5c5c5c;
+  --input-text-color: rgba(0, 0, 0, 0.4);
+  // Btn-colors, box-shadow, border-radius
+  --default-btn-color: #e86f54;
+  --hover-btn-color: #e25b41;
+  --focus-btn-color: #fa6f54;
+  --disablet-btn-color: rgba(232, 111, 84, 0.4);
+  --box-shadow-focus-btn: 0px 4px 16px rgba(250, 111, 84, 0.2);
+  --btn-border-radius: 38px;
+}
+$colors: (
+  // Colors
+  'white-bg-color': #ffffff,
+  'footer-bg-color': #000000,
+  'menu-mobile-bg-color': #e86f54,
+  'modal-bg-color': rgba(0, 0, 0, 0.3),
+  // Text colors
+  'black-text-color': #000000,
+  'white-text-color': #ffffff,
+  'form-text-color': #5c5c5c,
+  'input-text-color': rgba(0, 0, 0, 0.4),
+  // Btn-colors, box-shadow, border-radius
+  'default-btn-color': #e86f54,
+  'hover-btn-color': #e25b41,
+  'focus-btn-color': #fa6f54,
+  'box-shadow-focus-btn': 0px 4px 16px rgba(250, 111, 84, 0.2),
+  'btn-border-radius': 38px
+);
+
+//  przykład uzycia :
+// .class{
+//     color: getColor("black-text-color");
+// }

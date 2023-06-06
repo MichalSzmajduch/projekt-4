@@ -1,0 +1,46 @@
+<!-- <button data-modal-open class="Nowshop" type="button">Now Shop</button> -->
+<!-- okno modalne CONTACT US -->
+<div class="backdrop is-hidden" data-modal-contact="">
+  <div class="modal-contact">
+    <button class="modal-contact__button-close" data-modal-contact-close>
+      <svg class="modal-contact__svg" width="18" height="18">
+        <use href="./images/icons.svg#icon-x"></use>
+      </svg>
+    </button>
+    <p class="modal-contact__header">Contact us</p>
+    <p class="modal-contact__text">
+      If you have any additional questions or you want to clarify something before you make an order
+      please fill in your contact details. We will call you back.
+    </p>
+    <div class="modal-contact__container">
+      <form class="modal-contact__form" name="leave-your-details">
+        <div class="modal-contact__input-wrap">
+          <input
+            type="text"
+            name="username"
+            placeholder="Your name"
+            pattern=".+"
+            title="Use proper name"
+            required
+            class="modal-contact__input"
+          />
+          <label class="modal-contact__label">Name </label>
+        </div>
+        <div class="modal-contact__input-wrap">
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            title="Use proper email"
+            required
+            class="modal-contact__input"
+          />
+          <label class="modal-contact__label">Email </label>
+        </div>
+        <button class="modal-contact__button-send" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- <script src="./modal-contact.js"></script> -->

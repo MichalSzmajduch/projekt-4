@@ -1,0 +1,50 @@
+<div class="modal is-hidden">
+  <div class="modal__container">
+    <button class="modal__close">
+      <svg>
+        <use href="./images/icons.svg#icon-x"></use>
+      </svg>
+    </button>
+    <div class="modal__image">
+      <picture>
+        <source
+          media="(min-width:1280px)"
+          srcset="images/christie-kim_desktop.jpg 1x, images/christie-kim_desktop@2x.jpg 2x"
+          type="image/jpeg"
+        />
+
+        <source
+          media="(min-width:768px)"
+          srcset="images/christie-kim_tablet.jpg 1x, images/christie-kim_tablet@2x.jpg 2x"
+          type="image/jpeg"
+        />
+        <source
+          media="(max-width:767px)"
+          srcset="images/christie-kim_mobile.jpg 1x, images/christie-kim_mobile@2x.jpg 2x"
+          type="image/jpeg"
+        />
+        <img src="./images/christie-kim_mobile@2x.jpg" alt="flowers" />
+      </picture>
+    </div>
+    <div class="modal__content">
+      <h3 class="modal__title">Follow to our newsletter</h3>
+      <p class="modal__text">
+        Be the first to get exclusive offers and the latest news on our product directly in your
+        box.
+      </p>
+      <form class="modal__form">
+        <button type="submit" class="modal__button btn btn-subscribe">Subscribe</button>
+        <input
+          type="email"
+          class="modal__input"
+          placeholder="Your email"
+          id="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          title="Use proper email"
+          required
+        />
+        <label class="modal__label" for="email">Email</label>
+      </form>
+    </div>
+  </div>
+</div>
