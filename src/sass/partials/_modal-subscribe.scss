@@ -160,6 +160,9 @@
   &__button {
     margin: 18px 0 28px 0;
     width: 100%;
+    @include tablet {
+      margin: 28px 0 40px 0;
+    }
   }
 }
 .is-hidden {
