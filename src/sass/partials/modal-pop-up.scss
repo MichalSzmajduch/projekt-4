@@ -1,0 +1,164 @@
+.backdrop {
+  position: fixed;
+  z-index: 9999;
+  background: getColor('modal-bg-color');
+
+  transition: opacity 0.5s linear, visibility 0.5s linear;
+
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+
+  .modal-popup {
+    transform: scale(0);
+  }
+}
+
+.modal-popup {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 272px;
+
+  padding: 44px 16px 32px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  @include tablet {
+    max-width: 480px;
+    min-height: 505px;
+    padding: 54px 32px;
+    gap: 16px;
+  }
+
+  @include desktop {
+    max-width: 480px;
+    min-height: 505px;
+    padding: 48px 32px;
+    gap: 24px;
+  }
+
+  background: getColor('white-bg-color');
+
+  transition: transform 0.5s linear;
+  transform: scale(1);
+
+  &__button-close {
+    background: getColor('white-bg-color');
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    border: none;
+  }
+
+  &__svg {
+    width: '18';
+    height: '18';
+
+    @include tablet {
+      width: '24';
+      height: '24';
+    }
+
+    @include desktop {
+      width: '24';
+      height: '24';
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__header {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+
+    color: getColor('black-text-color');
+
+    @include tablet {
+      font-size: 32px;
+      line-height: 1.219;
+    }
+    @include desktop {
+      font-size: 32px;
+      line-height: 1.219;
+    }
+  }
+
+  &__text {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.25;
+    margin-bottom: 4px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    @include desktop {
+      font-size: 16px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    color: getColor('form-text-color');
+  }
+
+  &__button-continue {
+    width: 100%;
+    padding: 10px 87px;
+
+    border-radius: 8px;
+    border: none;
+
+    margin-top: 10px;
+
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.214;
+
+    text-align: center;
+
+    color: getColor('white-text-color');
+
+    background-color: getColor('default-btn-color');
+
+    @include tablet {
+      margin-top: 14px;
+      font-size: 18px;
+      line-height: 1.222;
+      padding: 14px 184px;
+    }
+
+    @include desktop {
+      margin-top: 14px;
+      font-size: 18px;
+      line-height: 1.222;
+      padding: 14px 184px;
+    }
+  }
+}
