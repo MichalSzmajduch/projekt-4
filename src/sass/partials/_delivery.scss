@@ -9,7 +9,6 @@
     text-transform: uppercase;
     @include tablet {
       font-size: 44px;
-      padding-left: 24px;
     }
   }
   &--line {
@@ -26,7 +25,6 @@
   &__background-img {
     background-size: cover;
     width: 100%;
-   
   }
 }
 .order {
