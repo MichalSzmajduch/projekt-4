@@ -11,17 +11,7 @@
       font-size: 44px;
     }
   }
-  &--line {
-    display: inline-block;
-    height: 1px;
-    background-color: var(--black-text-color);
-    margin-left: 16px;
-    padding-right: 24px;
-    width: 100vw;
-    @include tablet {
-      padding-right: 26px;
-    }
-  }
+
   &__background-img {
     background-size: cover;
     width: 100%;
