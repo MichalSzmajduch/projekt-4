@@ -59,6 +59,7 @@
     top: 19px;
     right: 19px;
     border: none;
+    cursor: pointer;
   }
 
   &__header {
@@ -127,6 +128,7 @@
     }
     &:valid [type='submit'] {
       background-color: var(--default-btn-color);
+      cursor: pointer;
     }
   }
   &__label {
