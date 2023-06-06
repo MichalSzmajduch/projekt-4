@@ -1,0 +1,70 @@
+<section class="container section" id="blog">
+  <h2 class="subtitle">BLOG</h2>
+  <div class="blog">
+    <div class="blog__img-box">
+      <img
+        src="./images/flowers_image1-desktop.jpg"
+        srcset="
+          ./images/flowers_image1-desktop.jpg    390w,
+          ./images/flowers_image1-desktop@2x.jpg 780w,
+          ./images/flowers_image1-tablet.jpg     344w,
+          ./images/flowers_image1-tablet@2x.jpg  688w,
+          ./images/flowers_image1-mobile.jpg     136w,
+          ./images/flowers_image1-mobile@2x.jpg  272w
+        "
+        alt="white flower"
+        class="blog__img"
+        loading="lazy"
+        width="315"
+        height="369"
+        sizes="(max-width: 767px) 136px, (min-width: 768px) 344px, (min-width: 1280px) 390px, 100vw"
+      />
+
+      <img
+        src="./images/flowers_image2-desktop.jpg"
+        srcset="
+          ./images/flowers_image2-desktop.jpg    390w,
+          ./images/flowers_image2-desktop@2x.jpg 780w,
+          ./images/flowers_image2-tablet.jpg     344w,
+          ./images/flowers_image2-tablet@2x.jpg  688w,
+          ./images/flowers_image2-mobile.jpg     136w,
+          ./images/flowers_image2-mobile@2x.jpg  272w
+        "
+        alt="colorfull flowers"
+        class="blog__img"
+        loading="lazy"
+        width="315"
+        height="369"
+        sizes="(min-width: 1280px) 390px, (min-width: 768px) 344px, (max-width: 767px) 136px, 100vw"
+      />
+
+      <img
+        src="./images/flowers_image3-desktop.jpg"
+        srcset="
+          ./images/flowers_image3-desktop.jpg    390w,
+          ./images/flowers_image3-desktop@2x.jpg 780w,
+          ./images/flowers_image3-tablet.jpg     344w,
+          ./images/flowers_image3-tablet@2x.jpg  688w,
+          ./images/flowers_image3-mobile.jpg     136w,
+          ./images/flowers_image3-mobile@2x.jpg  272w
+        "
+        alt="orange flower"
+        class="blog__img--desktop"
+        loading="lazy"
+        width="315"
+        height="369"
+        sizes="(min-width: 1280px) 390px, (min-width: 768px) 344px, (max-width: 767px) 136px, 100vw"
+      />
+    </div>
+  </div>
+  <div class="blog__icon-box">
+    <svg class="blog__icon" id="prev-btn">
+      <use href="./images/icons.svg#arrow_left"></use>
+    </svg>
+    <svg class="blog__icon" id="next-btn"><use href="./images/icons.svg#arrow_right"></use></svg>
+  </div>
+  <div class="blog__newsletter">
+    <p class="blog__text">Follow to our newsletter</p>
+    <button type="button" class="btn btn--subscribe modal__open">Subscribe</button>
+  </div>
+</section>

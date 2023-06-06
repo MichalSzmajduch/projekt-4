@@ -1,0 +1,34 @@
+<section class="hero">
+  <div class="hero__box container">
+    <h1 class="hero__title">ANEMONE</h1>
+    <h2 class="hero__subtitle">flower studio</h2>
+    <div class="hero__image">
+      <picture>
+        <source
+          media="(min-width:768px)"
+          srcset="images/image_home_page_d+t@2x.jpg"
+          type="image/jpg"
+        />
+        <source
+          media="(max-width:767.98px)"
+          srcset="images/image_home_page_mobile.jpg"
+          type="image/jpg"
+        />
+        <img
+          src="./images/image_home_page_mobile.jpg"
+          alt="flower"
+          loading="lazy"
+          width="390"
+          height="636"
+        />
+      </picture>
+    </div>
+    <button data-modal-contact-open class="hero__btn" type="button">
+      <svg width="64" height="76" class="hero__icon">
+        <use class="hero__icon--mob" href="./images/hero_svg.svg#icon-hero_mob"></use>
+        <use class="hero__icon--tab" href="./images/hero_svg.svg#icon-hero_tab"></use>
+        <use class="hero__icon--desk" href="./images/hero_svg.svg#icon-hero_desk"></use>
+      </svg>
+    </button>
+  </div>
+</section>
