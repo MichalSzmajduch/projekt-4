@@ -1,6 +1,7 @@
 .footer {
   background-color: var(--footer-bg-color);
-  padding: 32px 0px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   @include tablet {
     padding-top: 60px;
     padding-bottom: 54px;
@@ -10,10 +11,17 @@
   }
   &__wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
     @include tablet {
-      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 44px;
+    }
+    @include desktop {
+      gap: 96px;
     }
   }
   &__header {
@@ -24,6 +32,9 @@
     line-height: 1.22;
     margin-top: 0px;
     margin-bottom: 18px;
+    @include tablet {
+      font-size: 20px;
+    }
   }
   &__list {
     margin: 0px;
@@ -54,6 +65,9 @@
     &:focus,
     &:hover {
       color: var(--hover-btn-color);
+    }
+    @include tablet {
+      font-size: 16px;
     }
   }
   &__address {
@@ -121,57 +135,37 @@
   display: none;
   @include desktop {
     display: block;
-    margin-right: 210px;
   }
 }
 .nav-container {
-  margin-right: 44px;
-  margin-bottom: 32px;
-  width: 130px;
+  display: flex;
+  flex-direction: column;
   @include tablet {
     margin-bottom: 0px;
-  }
-  @include desktop {
-    margin-right: 96px;
   }
 }
 .contact-container {
   display: flex;
   justify-content: start;
   flex-direction: column;
-  margin-right: 32px;
-  width: 130px;
-  @include tablet {
-    margin-right: 65px;
-    width: 236px;
-  }
-  @include desktop {
-    margin-right: 208px;
-  }
 }
 .info-container {
   display: flex;
   justify-content: start;
   flex-direction: column;
-  width: 130px;
-  @include tablet {
-    margin-right: 44px;
-  }
-  @include desktop {
-    margin-right: 96px;
-  }
 }
 .social-media-container {
-  padding-right: 74px;
   @include tablet {
     width: 29px;
+    justify-content: end;
   }
 }
-.upper {
+
+.wth {
+  width: calc(50% - 15px);
+  flex-wrap: wrap;
   display: flex;
-  justify-content: center;
-}
-.down {
-  display: flex;
-  justify-content: center;
+  @include tablet {
+    width: calc(25% - 33px);
+  }
 }
