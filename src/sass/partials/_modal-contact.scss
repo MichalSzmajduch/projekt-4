@@ -53,6 +53,17 @@
   transition: transform 0.5s linear;
   transform: scale(1);
 
+  &__svg {
+    @include tablet {
+      width: 24;
+      height: 24;
+    }
+    @include desktop {
+      width: 24;
+      height: 24;
+    }
+  }
+
   &__button-close {
     background: getColor('white-bg-color');
     position: absolute;
