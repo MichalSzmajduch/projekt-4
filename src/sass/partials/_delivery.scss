@@ -1,17 +1,4 @@
 .delivery {
-  display: flex;
-  align-items: center;
-  &--header {
-    font-family: var(--main-font);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 0.82;
-    text-transform: uppercase;
-    @include tablet {
-      font-size: 44px;
-    }
-  }
-
   &__background-img {
     background-size: cover;
     width: 100%;
