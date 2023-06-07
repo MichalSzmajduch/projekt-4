@@ -76,6 +76,14 @@
   @include desktop {
     gap: 48px;
   }
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    @include desktop {
+      gap: 48px;
+    }
+  }
 
   &__link {
     text-decoration: none;
